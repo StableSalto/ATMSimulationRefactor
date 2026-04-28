@@ -1,4 +1,4 @@
-﻿namespace ATMSimulation
+namespace ATMSimulation
 {
     partial class MainForm
     {
@@ -33,19 +33,19 @@
             this.lblCheckingAccount = new System.Windows.Forms.Label();
             this.lblSavingsBalance = new System.Windows.Forms.Label();
             this.lblCheckingBalance = new System.Windows.Forms.Label();
-            this.btnDeposit = new System.Windows.Forms.Button();
-            this.btnWithdraw = new System.Windows.Forms.Button();
+            this.ButtonDeposit = new System.Windows.Forms.Button();
+            this.ButtonWithdraw = new System.Windows.Forms.Button();
             this.rbtnSavings = new System.Windows.Forms.RadioButton();
             this.rbtnChecking = new System.Windows.Forms.RadioButton();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.TextBoxAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblAccountNumberDisplay
             // 
             this.lblAccountNumberDisplay.AutoSize = true;
             this.lblAccountNumberDisplay.Location = new System.Drawing.Point(13, 38);
-            this.lblAccountNumberDisplay.Name = "lbl_accountNumbDisplay";
+            this.lblAccountNumberDisplay.Name = "lblAccountNumberDisplay";
             this.lblAccountNumberDisplay.Size = new System.Drawing.Size(129, 13);
             this.lblAccountNumberDisplay.TabIndex = 0;
             this.lblAccountNumberDisplay.Text = "Welcome Account Holder";
@@ -54,7 +54,7 @@
             // 
             this.lblSavingsAccount.AutoSize = true;
             this.lblSavingsAccount.Location = new System.Drawing.Point(13, 126);
-            this.lblSavingsAccount.Name = "lbl_savAccount";
+            this.lblSavingsAccount.Name = "lblSavingsAccount";
             this.lblSavingsAccount.Size = new System.Drawing.Size(144, 13);
             this.lblSavingsAccount.TabIndex = 1;
             this.lblSavingsAccount.Text = "Balance in Savings Account:";
@@ -63,16 +63,16 @@
             // 
             this.lblCheckingAccount.AutoSize = true;
             this.lblCheckingAccount.Location = new System.Drawing.Point(13, 164);
-            this.lblCheckingAccount.Name = "lbl_cheAccount";
-            this.lblCheckingAccount.Size = new System.Drawing.Size(145, 13);
+            this.lblCheckingAccount.Name = "lblCheckingAccount";
+            this.lblCheckingAccount.Size = new System.Drawing.Size(151, 13);
             this.lblCheckingAccount.TabIndex = 2;
-            this.lblCheckingAccount.Text = "Balance in Checking Acount:";
+            this.lblCheckingAccount.Text = "Balance in Checking Account:";
             // 
             // lblSavingsBalance
             // 
             this.lblSavingsBalance.AutoSize = true;
             this.lblSavingsBalance.Location = new System.Drawing.Point(164, 126);
-            this.lblSavingsBalance.Name = "lbl_savingsBal";
+            this.lblSavingsBalance.Name = "lblSavingsBalance";
             this.lblSavingsBalance.Size = new System.Drawing.Size(84, 13);
             this.lblSavingsBalance.TabIndex = 3;
             this.lblSavingsBalance.Text = "savings balance";
@@ -81,38 +81,38 @@
             // 
             this.lblCheckingBalance.AutoSize = true;
             this.lblCheckingBalance.Location = new System.Drawing.Point(167, 164);
-            this.lblCheckingBalance.Name = "lbl_checkingBal";
+            this.lblCheckingBalance.Name = "lblCheckingBalance";
             this.lblCheckingBalance.Size = new System.Drawing.Size(92, 13);
             this.lblCheckingBalance.TabIndex = 4;
             this.lblCheckingBalance.Text = "checking balance";
             // 
-            // btnDeposit
+            // ButtonDeposit
             // 
-            this.btnDeposit.Enabled = false;
-            this.btnDeposit.Location = new System.Drawing.Point(578, 145);
-            this.btnDeposit.Name = "btn_Deposit";
-            this.btnDeposit.Size = new System.Drawing.Size(75, 23);
-            this.btnDeposit.TabIndex = 5;
-            this.btnDeposit.Text = "Deposit";
-            this.btnDeposit.UseVisualStyleBackColor = true;
-            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
+            this.ButtonDeposit.Enabled = false;
+            this.ButtonDeposit.Location = new System.Drawing.Point(578, 145);
+            this.ButtonDeposit.Name = "ButtonDeposit";
+            this.ButtonDeposit.Size = new System.Drawing.Size(75, 23);
+            this.ButtonDeposit.TabIndex = 5;
+            this.ButtonDeposit.Text = "Deposit";
+            this.ButtonDeposit.UseVisualStyleBackColor = true;
+            this.ButtonDeposit.Click += new System.EventHandler(this.ButtonDeposit_Click);
             // 
-            // btnWithdraw
+            // ButtonWithdraw
             // 
-            this.btnWithdraw.Enabled = false;
-            this.btnWithdraw.Location = new System.Drawing.Point(659, 145);
-            this.btnWithdraw.Name = "btn_Withdraw";
-            this.btnWithdraw.Size = new System.Drawing.Size(75, 23);
-            this.btnWithdraw.TabIndex = 6;
-            this.btnWithdraw.Text = "Withdraw";
-            this.btnWithdraw.UseVisualStyleBackColor = true;
-            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
+            this.ButtonWithdraw.Enabled = false;
+            this.ButtonWithdraw.Location = new System.Drawing.Point(659, 145);
+            this.ButtonWithdraw.Name = "ButtonWithdraw";
+            this.ButtonWithdraw.Size = new System.Drawing.Size(75, 23);
+            this.ButtonWithdraw.TabIndex = 6;
+            this.ButtonWithdraw.Text = "Withdraw";
+            this.ButtonWithdraw.UseVisualStyleBackColor = true;
+            this.ButtonWithdraw.Click += new System.EventHandler(this.ButtonWithdraw_Click);
             // 
             // rbtnSavings
             // 
             this.rbtnSavings.AutoSize = true;
             this.rbtnSavings.Location = new System.Drawing.Point(621, 65);
-            this.rbtnSavings.Name = "rbtn_Savings";
+            this.rbtnSavings.Name = "rbtnSavings";
             this.rbtnSavings.Size = new System.Drawing.Size(106, 17);
             this.rbtnSavings.TabIndex = 7;
             this.rbtnSavings.TabStop = true;
@@ -123,47 +123,47 @@
             // 
             this.rbtnChecking.AutoSize = true;
             this.rbtnChecking.Location = new System.Drawing.Point(621, 89);
-            this.rbtnChecking.Name = "rbtn_Checking";
+            this.rbtnChecking.Name = "rbtnChecking";
             this.rbtnChecking.Size = new System.Drawing.Size(113, 17);
             this.rbtnChecking.TabIndex = 8;
             this.rbtnChecking.TabStop = true;
             this.rbtnChecking.Text = "Checking Account";
             this.rbtnChecking.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblAmount
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.Location = new System.Drawing.Point(470, 126);
-            this.lblAmount.Name = "label1";
+            this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(150, 13);
             this.lblAmount.TabIndex = 9;
             this.lblAmount.Text = "Amount to Deposit/Withdraw: ";
             // 
-            // txtAmount
+            // TextBoxAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(621, 119);
-            this.txtAmount.Name = "txt_Amount";
-            this.txtAmount.Size = new System.Drawing.Size(100, 20);
-            this.txtAmount.TabIndex = 10;
-            this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
+            this.TextBoxAmount.Location = new System.Drawing.Point(621, 119);
+            this.TextBoxAmount.Name = "TextBoxAmount";
+            this.TextBoxAmount.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxAmount.TabIndex = 10;
+            this.TextBoxAmount.TextChanged += new System.EventHandler(this.TextBoxAmount_TextChanged);
             // 
-            // frmMain
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.TextBoxAmount);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.rbtnChecking);
             this.Controls.Add(this.rbtnSavings);
-            this.Controls.Add(this.btnWithdraw);
-            this.Controls.Add(this.btnDeposit);
+            this.Controls.Add(this.ButtonWithdraw);
+            this.Controls.Add(this.ButtonDeposit);
             this.Controls.Add(this.lblCheckingBalance);
             this.Controls.Add(this.lblSavingsBalance);
             this.Controls.Add(this.lblCheckingAccount);
             this.Controls.Add(this.lblSavingsAccount);
             this.Controls.Add(this.lblAccountNumberDisplay);
-            this.Name = "frmMain";
+            this.Name = "MainForm";
             this.Text = "Automatic Teller Machine";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,11 +177,11 @@
         private System.Windows.Forms.Label lblCheckingAccount;
         private System.Windows.Forms.Label lblSavingsBalance;
         private System.Windows.Forms.Label lblCheckingBalance;
-        private System.Windows.Forms.Button btnDeposit;
-        private System.Windows.Forms.Button btnWithdraw;
+        private System.Windows.Forms.Button ButtonDeposit;
+        private System.Windows.Forms.Button ButtonWithdraw;
         private System.Windows.Forms.RadioButton rbtnSavings;
         private System.Windows.Forms.RadioButton rbtnChecking;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox TextBoxAmount;
     }
 }
