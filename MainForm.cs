@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
@@ -9,7 +9,7 @@ namespace ATMSimulation
     /// </summary>
     public partial class MainForm : Form
     {
-        private BankCustomer _currentCustomer;
+        private readonly BankCustomer _currentCustomer;
         public MainForm(BankCustomer Customer)
         {
             InitializeComponent();
@@ -23,9 +23,9 @@ namespace ATMSimulation
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnDeposit_Click(object sender, EventArgs e)
+        private void ButtonDeposit_Click(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txtAmount.Text, out decimal amount))
+            if (decimal.TryParse(TextBoxAmount.Text, out decimal amount))
             {
                 if (rbtnChecking.Checked)
                 {
@@ -37,17 +37,17 @@ namespace ATMSimulation
                     _currentCustomer.SavingsAccount.Deposit(amount);
                     SQLHelper.UpdateAccountBalance(_currentCustomer.SavingsAccount.AccountNumber, _currentCustomer.SavingsAccount.Balance);
                 }
-                updateBalance();
-                janitorFunction();
+                UpdateBalance();
+                JanitorFunction();
             }
             else { MessageBox.Show("Please use a valid amount"); }
         }
         /// <summary>
         /// Executes the withdraw function and checks for which account to send the logic to.
         /// </summary>
-        private void btnWithdraw_Click(object sender, EventArgs e)
+        private void ButtonWithdraw_Click(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txtAmount.Text, out decimal amount))
+            if (decimal.TryParse(TextBoxAmount.Text, out decimal amount))
             {
                 bool transactionWorked = false;
 
@@ -64,8 +64,8 @@ namespace ATMSimulation
                 }
                 if (transactionWorked)
                 {
-                    updateBalance();
-                    janitorFunction();
+                    UpdateBalance();
+                    JanitorFunction();
                 }
             }
             else { MessageBox.Show("Please use a valid amount"); }
@@ -75,16 +75,16 @@ namespace ATMSimulation
         /// <summary>
         /// Clears text entered in the amount text and disables the deposit and withdraw buttons.
         /// </summary>
-        private void janitorFunction()
+        private void JanitorFunction()
         {
-            txtAmount.Clear();
-            btnDeposit.Enabled = false;
-            btnWithdraw.Enabled = false;
+            TextBoxAmount.Clear();
+            ButtonDeposit.Enabled = false;
+            ButtonWithdraw.Enabled = false;
         }
         /// <summary>
         /// Updates the labels of the accounts after a change is made
         /// </summary>
-        private void updateBalance()
+        private void UpdateBalance()
         {
             lblSavingsBalance.Text = _currentCustomer.SavingsAccount.Balance.ToString("C");
             lblCheckingBalance.Text = _currentCustomer.CheckingAccount.Balance.ToString("C");
@@ -92,11 +92,11 @@ namespace ATMSimulation
         /// <summary>
         /// Checks for the textbox to change then enables the deposit and withdraw buttons.
         /// </summary>
-        private void txtAmount_TextChanged(object sender, EventArgs e)
+        private void TextBoxAmount_TextChanged(object sender, EventArgs e)
         {
-            bool hasAmount = !string.IsNullOrWhiteSpace(txtAmount.Text);
-            btnDeposit.Enabled = hasAmount;
-            btnWithdraw.Enabled = hasAmount;
+            bool hasAmount = !string.IsNullOrWhiteSpace(TextBoxAmount.Text);
+            ButtonDeposit.Enabled = hasAmount;
+            ButtonWithdraw.Enabled = hasAmount;
         }
         
     }
