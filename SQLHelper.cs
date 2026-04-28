@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ATMSimulation
@@ -10,7 +11,10 @@ namespace ATMSimulation
     /// </summary>
     public class SQLHelper
     {
-        private static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BankDatabase.mdf;Integrated Security=True";
+        private static readonly string _executablePath = AppDomain.CurrentDomain.BaseDirectory;
+        private static readonly string _databasePath = Path.GetFullPath(Path.Combine(_executablePath, @"..\..\BankDatabase.mdf"));
+
+        private static string _connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={_databasePath};Integrated Security=True";
         /// <summary>
         /// Validates the login that the user implemenets and puts it against the database.
         /// </summary>
